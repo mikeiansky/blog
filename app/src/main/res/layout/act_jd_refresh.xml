@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.winson.widget.pullrefreshlayout.PullRefreshLayout
+        android:id="@+id/pull_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.winson.widget.pullrefreshlayout.PullRefreshHeadLayout
+            android:id="@id/pull_refresh_head"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#0f9101"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/pre_refresh_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="43dp"
+                    android:layout_gravity="bottom|left"
+                    android:background="@drawable/jd_people" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|left"
+                    android:layout_marginLeft="105dp"
+                    android:layout_marginBottom="50dp"
+                    android:id="@+id/jd_box"
+                    android:background="@drawable/jd_box" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/on_refresh_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp">
+
+                <ImageView
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/jd_refresh_speed" />
+
+                <ImageView
+                    android:layout_gravity="center_vertical|left"
+                    android:id="@+id/jd_refresh_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="43dp"
+                    android:background="@drawable/jd_refresh" />
+
+            </FrameLayout>
+
+        </com.winson.widget.pullrefreshlayout.PullRefreshHeadLayout>
+
+        <com.winson.widget.pullrefreshlayout.PullRefreshListView
+            android:id="@id/pull_refresh_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.winson.widget.pullrefreshlayout.PullRefreshLayout>
+
+</LinearLayout>

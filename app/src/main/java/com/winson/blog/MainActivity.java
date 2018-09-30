@@ -13,6 +13,7 @@ import com.winson.blog.base.BaseActivity;
 import com.winson.blog.base.CommonAdapter;
 import com.winson.blog.base.TestActItem;
 import com.winson.blog.base.ViewHolder;
+import com.winson.blog.jd_refresh.JDRefreshActivity;
 import com.winson.blog.video.TestLoopVideoActivity;
 
 import java.util.ArrayList;
@@ -37,6 +38,11 @@ public class MainActivity extends BaseActivity {
         TestActItem testActItem = new TestActItem();
         testActItem.title = "Test Loop Video";
         testActItem.actClass = TestLoopVideoActivity.class;
+        testActs.add(testActItem);
+
+        testActItem = new TestActItem();
+        testActItem.title = "JD Refresh";
+        testActItem.actClass = JDRefreshActivity.class;
         testActs.add(testActItem);
 
         final TestActListAdapter testActListAdapter = new TestActListAdapter(this, testActs);
